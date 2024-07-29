@@ -1,0 +1,90 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+.container {
+    position: relative;
+    width: 160px; 
+    height: 160px;
+}
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.circle1 {
+    width: 160px;
+    height: 160px; 
+    background: #bea930; 
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.circle2 {
+    width: 110px;
+    height: 110px; 
+    background: #ffffff; 
+    top: 25px; 
+    left: 25px; 
+    z-index: 3;
+}
+.circle3 {
+    width: 80px;
+    height: 80px;
+    background: #e7f312; 
+    top: 40px; 
+    left: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4; 
+}
+.text {
+    font-size: 14px; 
+    color: #333;
+    text-align: center;
+}
+.text-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+.texte {
+    position: absolute;
+    width: 100px; 
+    height: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+}
+.text1 { 
+    transform: rotate(45deg) translate(60px) rotate(-45deg) rotate(135deg); 
+}
+.text2 { 
+    transform: rotate(135deg) translate(60px) rotate(-135deg) rotate(45deg) rotate(-180deg); 
+}
+.text3 { 
+    transform: rotate(225deg) translate(60px) rotate(-225deg) rotate(315deg); 
+}
+.text4 { 
+    transform: rotate(315deg) translate(60px) rotate(-315deg) rotate(45deg); 
+}
+.circle3:hover ~ .circle1 {
+    transform: scale(1.2); 
+}
+
+.circle3:hover ~ .circle1 .text-container {
+    opacity: 1; 
+}
